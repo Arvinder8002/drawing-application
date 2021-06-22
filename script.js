@@ -8,7 +8,7 @@ let isDrawing;
 let lastX;
 let lastY;
 let value;
-let lwidth;
+let lwidth = 5;
 let scrollTop;
 const color = document.querySelector("#color");
 const background = document.querySelector("#background");
