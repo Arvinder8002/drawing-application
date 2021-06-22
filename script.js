@@ -25,8 +25,8 @@ setTimeout(() => {
 }, 5000)
 
 function init() {
-  canvas.width = innerWidth - 40 + 'px';
-  canvas.height = innerHeight - 40 + 'px';
+  canvas.width = innerWidth - 40;
+  canvas.height = innerHeight - 40;
 }
 //resizing the  canvas
 function resize() {
@@ -187,6 +187,6 @@ undoBtn.addEventListener("click", () => {
 
 if (window.innerWidth < 450) {
   window.removeEventListener('resize', resize)
-  canvas.height = innerHeight - 60 + 'px';
-  canvas.width = innerWidth - 20 + 'px';
+  canvas.height = innerHeight - 60;
+  canvas.width = innerWidth - 20;
 }
