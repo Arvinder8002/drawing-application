@@ -185,8 +185,8 @@ undoBtn.addEventListener("click", () => {
   c.putImageData(drawingArray[index], 0, 0);
 });
 
-if (window.innerWidth < 550) {
+if (window.innerWidth < 450) {
   window.removeEventListener('resize', resize)
-  canvas.height = innerHeight - 80;
+  canvas.height = innerHeight - 60;
   canvas.width = innerWidth - 20;
 }
