@@ -115,7 +115,7 @@ function selectColorful() {
 //draw function
 function draw(e) {
   e.preventDefault();
-  c.save();
+  //c.save();
   if (!isDrawing) return;
   c.beginPath();
   c.moveTo(lastX, lastY);
@@ -133,7 +133,7 @@ function draw(e) {
   lastX = coordinates.x;
   lastY = coordinates.y;
   change += 2;
-  c.restore();
+  //c.restore();
 }
 
 //erasing the content
