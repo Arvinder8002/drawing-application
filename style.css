@@ -5,7 +5,6 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: #333333;
   color: gray;
   font-family: sans-serif;
@@ -53,9 +52,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
+canvas {
+  box-shadow:5px 5px 5px #111111,
+             -1px -1px 3px #999999;
+}
 
 .tools {
   margin-top: 30px;
