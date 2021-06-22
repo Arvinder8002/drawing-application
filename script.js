@@ -26,7 +26,7 @@ setTimeout(() => {
 
 function init() {
   canvas.width = innerWidth - 40;
-  canvas.height = innerHeight - 40;
+  canvas.height = innerHeight - 60;
 }
 //resizing the  canvas
 function resize() {
@@ -34,7 +34,7 @@ function resize() {
     H = canvas.height;
   let temp = c.getImageData(0, 0, W, H);
   c.canvas.width = window.innerWidth - 40;
-  c.canvas.height = window.innerHeight - 40;
+  c.canvas.height = window.innerHeight - 60;
   W = canvas.width;
   H = canvas.height;
   c.putImageData(temp, 0, 0);
