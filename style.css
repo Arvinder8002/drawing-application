@@ -56,10 +56,6 @@ body {
   height: 100vh;
 }
 
-canvas {
-  box-shadow:5px 5px 5px #111111,
-             -1px -1px 3px #999999;
-}
 
 .tools {
   margin-top: 30px;
@@ -87,7 +83,6 @@ canvas {
   background-image: linear-gradient(135deg,#99999910,#11111188);
   box-shadow:3px 3px 5px #111111,
              -1px -1px 3px #999999;
-  color:green;
 }
 
 .tools h3 {
