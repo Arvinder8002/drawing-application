@@ -153,6 +153,8 @@ input[type="checkbox"]:checked ~ label {
 @media screen and (max-width: 550px) {
   .canvas-container{
     height: 95vh;
+    display: block;
+    padding: 20px 10px 30px 10px;
   }
   
   .buttons{
