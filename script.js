@@ -47,14 +47,14 @@ const html = document.querySelector('html');
 function getCoordinates(e) {
   if (e.type.includes('mouse')) {
     return {
-      x: e.offsetX,
-      y: e.offsetY
+      x: e.offsetX + 0.5,
+      y: e.offsetY + 0.5
     }
   }
   else {
     return {
-      x: (e.touches[0].clientX - e.target.offsetLeft),
-      y: e.touches[0].clientY - e.target.offsetTop + html.scrollTop
+      x: (e.touches[0].clientX - e.target.offsetLeft) + 0.5,
+      y: e.touches[0].clientY - e.target.offsetTop + html.scrollTop + 0.5
     }
   }
 }
