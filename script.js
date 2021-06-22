@@ -26,7 +26,7 @@ setTimeout(() => {
 
 function init() {
   canvas.width = innerWidth - 40;
-  canvas.height = innerHeight - 60;
+  canvas.height = innerHeight - 40;
 }
 //resizing the  canvas
 function resize() {
@@ -184,3 +184,7 @@ undoBtn.addEventListener("click", () => {
   drawingArray.pop();
   c.putImageData(drawingArray[index], 0, 0);
 });
+
+if (window.innerWidth < 550) {
+  window.removeEventListener('resize', resize)
+}
