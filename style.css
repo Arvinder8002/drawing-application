@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #333333;
+  color: gray;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.intro{
+  position:fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  background-color: #111111;
+  color:#BBBBBB;
+  display: grid;
+  place-items:center;
+  animation:hide 0.9s ease forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes hide{
+  to{
+    transform: translateY(-100%);
+  }
+}
+.intro .intro-text{
+  font-size:60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.intro .intro-text .text{
+  clip-path: inset(0 0 100% 0);
+  animation: reveal 0.9s  ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes reveal{
+  to{
+    clip-path: inset(0 0 0 0);
+  }
+}
+.canvas-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas {
+  box-shadow:5px 5px 5px #111111,
+             -1px -1px 3px #999999;
+}
+
+.tools {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.c-container{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.buttons {
+  display: flex;
+}
+
+.clear-btn,
+.undo-btn {
+  padding: 10px 15px;
+  margin-right: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  background-image: linear-gradient(135deg,#99999910,#11111188);
+  box-shadow:3px 3px 5px #111111,
+             -1px -1px 3px #999999;
+}
+
+.tools h3 {
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.tools h4 {
+  margin-left: 5px;
+}
+
+.tools .c {
+  display: flex;
+  align-items: center;
+}
+
+.download-wrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: center;
+}
+
+.saveButton {
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: royalblue;
+  box-shadow:3px 3px 5px #111111,
+             -1px -1px 3px #999999;
+  background-image: linear-gradient(135deg,#99999910,#11111188);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.toggles label, .c:not(.toggles){
+  border-radius: 7px;
+  margin: 10px;
+  padding: 10px 15px;
+  box-shadow:3px 3px 5px #111111,
+             -1px -1px 3px #999999;
+}
+
+
+input[type="checkbox"]:checked ~ label {
+  background-color: gray;
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .c-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c-container h3{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .buttons{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .clear-btn,.undo-btn{
+    margin: 0 0 20px 0;
+  }
+
+  .intro .intro-text{
+    font-size: 50px;
+  }
+}

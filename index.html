@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" media="all">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="intro">
+        <div class="intro-text">
+            <div class="text" style="--i:0;">Unleash</div>
+            <div class="text" style="--i:1;">Your</div>
+            <div class="text" style="--i:2;">Imagination</div>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <canvas> </canvas>
+    </div>
+    <div class="tools">
+        <div class="buttons">
+            <div class="clear-btn">Clear</div>
+            <div class="undo-btn">Undo</div>
+            <div class="download-wrapper">
+                <a href="#" class="saveButton" download="true">download your work</a>
+            </div>
+        </div>
+        <div class="c-container">
+            <div class="c">
+                <label for="color">
+                    <h3>Color :</h3>
+                </label>
+                <input type="color" id="color" onchange="changeColor()" />
+            </div>
+            <div class="c">
+                <label for="range">
+                    <h3>Size :</h3>
+                </label>
+                <input type="range" min="1" max="90" value="5" id="range" oninput="changeWidth()" />
+                <h4></h4>
+            </div>
+            <div class="c toggles">
+                <input type="checkbox" onchange="erase()" id="eraser" />
+                <label for="eraser">
+                    <h3>Eraser</h3>
+                </label>
+            </div>
+            <div class="c toggles">
+                <input type="checkbox" id="colorful" id="colorful" onchange="selectColorful()" />
+                <label for="colorful">
+                    <h3>Colorful line</h3>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
