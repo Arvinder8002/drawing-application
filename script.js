@@ -25,8 +25,8 @@ setTimeout(() => {
 }, 5000)
 
 function init() {
-  canvas.width = innerWidth - 40;
-  canvas.height = innerHeight - 40;
+  canvas.width = innerWidth - 40 + 'px';
+  canvas.height = innerHeight - 40 + 'px';
 }
 //resizing the  canvas
 function resize() {
@@ -115,7 +115,7 @@ function selectColorful() {
 //draw function
 function draw(e) {
   e.preventDefault();
-  //c.save();
+  c.save();
   if (!isDrawing) return;
   c.beginPath();
   c.moveTo(lastX, lastY);
@@ -133,7 +133,7 @@ function draw(e) {
   lastX = coordinates.x;
   lastY = coordinates.y;
   change += 2;
-  //c.restore();
+  c.restore();
 }
 
 //erasing the content
@@ -187,6 +187,6 @@ undoBtn.addEventListener("click", () => {
 
 if (window.innerWidth < 450) {
   window.removeEventListener('resize', resize)
-  canvas.height = innerHeight - 60;
-  canvas.width = innerWidth - 20;
+  canvas.height = innerHeight - 60 + 'px';
+  canvas.width = innerWidth - 20 + 'px';
 }
