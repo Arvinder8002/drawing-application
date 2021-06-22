@@ -187,4 +187,6 @@ undoBtn.addEventListener("click", () => {
 
 if (window.innerWidth < 550) {
   window.removeEventListener('resize', resize)
+  canvas.height = innerHeight - 80;
+  canvas.width = innerWidth - 20;
 }

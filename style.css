@@ -151,6 +151,10 @@ input[type="checkbox"]:checked ~ label {
 }
 
 @media screen and (max-width: 550px) {
+  .canvas-container{
+    height: 95vh;
+  }
+  
   .buttons{
     flex-direction: column;
     align-items: center;
